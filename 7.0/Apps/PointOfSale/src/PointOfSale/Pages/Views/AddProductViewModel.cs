@@ -1,4 +1,5 @@
 ﻿using System;
+using PointOfSale.Messages;
 namespace PointOfSale.Pages;
 
 [INotifyPropertyChanged]
@@ -26,7 +27,17 @@ public partial class AddProductViewModel
 
         MessagingCenter.Send<AddProductViewModel, string>(this, "action", "done");
     }
-    #pragma warning restore 1998, 618
+#pragma warning restore 1998, 618
+
+    [RelayCommand]
+    void Cancel()
+    {
+        //        WeakReferenceMessenger.Default.Send<AddProductMessage>(new AddProductMessage(false));
+#pragma warning disable CS0618 // Type or member is obsolete
+        MessagingCenter.Send<AddProductViewModel, string>(this, "action", "cancel");
+#pragma warning restore CS0618 // Type or member is obsolete
+
+    }
 
     [RelayCommand]
     async Task ChangeImage()
