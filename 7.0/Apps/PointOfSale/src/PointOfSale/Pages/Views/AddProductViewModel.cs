@@ -8,7 +8,7 @@ public partial class AddProductViewModel
     Item item = new Item();
 
     [ObservableProperty]
-    string category = ItemCategory.Noodles.ToString();
+    string category = ItemCategory.Main.ToString();
 
     [ObservableProperty]
     string imagePath = "noimage.png";
@@ -16,6 +16,7 @@ public partial class AddProductViewModel
     [ObservableProperty]
     ImageSource image;
 
+    #pragma warning disable 1998, 618
     [RelayCommand]
     async void Save()
     {
@@ -25,6 +26,7 @@ public partial class AddProductViewModel
 
         MessagingCenter.Send<AddProductViewModel, string>(this, "action", "done");
     }
+    #pragma warning restore 1998, 618
 
     [RelayCommand]
     async Task ChangeImage()
@@ -38,6 +40,7 @@ public partial class AddProductViewModel
         Item.Image = ImagePath = file.FullPath;
     }
 
+    #pragma warning disable 168
     public async Task<FileResult> PickAndShow(PickOptions options)
     {
         try
@@ -62,5 +65,6 @@ public partial class AddProductViewModel
 
         return null;
     }
+    #pragma warning restore 168
 }
 
