@@ -11,7 +11,9 @@ public partial class MobileLoginViewModel
     }
 
     // display the message
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
     private async Task ShowMessage(string title, string message)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     {
         _ = App.Current.MainPage.Dispatcher.Dispatch(async () =>
         {
