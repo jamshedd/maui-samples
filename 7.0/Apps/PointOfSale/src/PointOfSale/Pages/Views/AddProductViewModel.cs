@@ -1,6 +1,4 @@
 ﻿using System;
-using PointOfSale.Messages;
-
 namespace PointOfSale.Pages;
 
 [INotifyPropertyChanged]
@@ -10,7 +8,7 @@ public partial class AddProductViewModel
     Item item = new Item();
 
     [ObservableProperty]
-    string category = ItemCategory.Noodles.ToString();
+    string category = ItemCategory.Main.ToString();
 
     [ObservableProperty]
     string imagePath = "noimage.png";
@@ -18,23 +16,19 @@ public partial class AddProductViewModel
     [ObservableProperty]
     ImageSource image;
 
+    #pragma warning disable 1998, 618
     [RelayCommand]
-    void Save()
+    async void Save()
     {
         ItemCategory cat = (ItemCategory)Enum.Parse(typeof(ItemCategory), category);
         item.Category = cat;
         AppData.Items.Add(item);
 
-        WeakReferenceMessenger.Default.Send<AddProductMessage>(new AddProductMessage(false));
+        MessagingCenter.Send<AddProductViewModel, string>(this, "action", "done");
     }
+    #pragma warning restore 1998, 618
 
     [RelayCommand]
-    void Cancel()
-    {
-        WeakReferenceMessenger.Default.Send<AddProductMessage>(new AddProductMessage(false));
-    }
-
-        [RelayCommand]
     async Task ChangeImage()
     {
         PickOptions options = new()
@@ -46,6 +40,7 @@ public partial class AddProductViewModel
         Item.Image = ImagePath = file.FullPath;
     }
 
+    #pragma warning disable 168
     public async Task<FileResult> PickAndShow(PickOptions options)
     {
         try
@@ -70,5 +65,6 @@ public partial class AddProductViewModel
 
         return null;
     }
+    #pragma warning restore 168
 }
 

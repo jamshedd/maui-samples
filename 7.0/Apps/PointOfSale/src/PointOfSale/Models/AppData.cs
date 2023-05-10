@@ -8,16 +8,38 @@ public static class AppData
 
     public static List<Item> Items = new List<Item>
     {
-        new Item(){ Title = "Japchae", Price    = 13.99, Quantity = 1, Image = "japchae.png", Category = ItemCategory.Noodles},
-        new Item(){ Title = "Jajangmyeon", Price = 14.99, Quantity = 1, Image = "jajangmyeon.png", Category = ItemCategory.Noodles},
-        new Item(){ Title = "Janchi Guksu", Price = 12.99, Quantity = 1, Image = "janchi_guksu.png", Category = ItemCategory.Noodles},
-        new Item(){ Title = "Budae Jjigae", Price = 14.99, Quantity = 1, Image = "budae_jjigae.png", Category = ItemCategory.Noodles},
-        new Item(){ Title = "Naengmyeon", Price = 12.99, Quantity = 1, Image = "naengmyeon.png", Category = ItemCategory.Noodles},
-        new Item(){ Title = "Soda", Price = 2.50, Quantity = 1, Category = ItemCategory.Beverages, Image = "soda.png"},
-        new Item(){ Title = "Iced Tea", Price = 3.50, Quantity = 1, Category = ItemCategory.Beverages, Image = "iced_tea.png"},
-        new Item(){ Title = "Hot Tea", Price = 4.00, Quantity = 1, Category = ItemCategory.Beverages, Image = "tea.png"},
-        new Item(){ Title = "Coffee", Price = 4.00, Quantity = 1, Category = ItemCategory.Beverages, Image = "coffee.png"},
-        new Item(){ Title = "Milk", Price = 5.00, Quantity = 1, Category = ItemCategory.Beverages, Image = "milk.png"},
+        new Item(){ Title = "Tomato Soup", Price = 4.00, Quantity = 1, Category = ItemCategory.Starters, Image = "tomatosoup.jpg"},
+        new Item(){ Title = "Clam Chowder", Price = 4.50, Quantity = 1, Category = ItemCategory.Starters, Image = "clamchowder.jpg"},
+        new Item(){ Title = "Idli Sambar", Price = 3.00, Quantity = 1, Category = ItemCategory.Starters, Image = "idlisambar.jpg"},
+        new Item(){ Title = "Kothambir Vadi", Price = 2.50, Quantity = 1, Category = ItemCategory.Starters, Image = "kothambirvadi.jpg"},
+        new Item(){ Title = "Oysters", Price = 7.00, Quantity = 1, Category = ItemCategory.Starters, Image = "oysters.jpg"},
+        new Item(){ Title = "Pani Puri", Price = 6.00, Quantity = 1, Category = ItemCategory.Starters, Image = "panipuri.jpg"},
+
+        new Item(){ Title = "Pork Dumplings", Price = 6.50, Quantity = 1, Category = ItemCategory.Main, Image = "dumplings.jpg"},
+        new Item(){ Title = "Baked Fish", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "fish.jpg"},
+        new Item(){ Title = "Chola Bhatura", Price = 7.00, Quantity = 1, Category = ItemCategory.Main, Image = "cholabhatura.jpg"},
+        new Item(){ Title = "Flat Noodles", Price = 5.95, Quantity = 1, Category = ItemCategory.Main, Image = "flatnoodles.jpg"},
+        new Item(){ Title = "Ramen", Price = 4.50, Quantity = 1, Category = ItemCategory.Main, Image = "ramen.jpg"},
+        new Item(){ Title = "Fried Wontons", Price = 4.00, Quantity = 1, Category = ItemCategory.Main, Image = "friedwontons.jpg"},
+        new Item(){ Title = "Ham, Egg, and Roasted Potatoes", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "hameggpotatoes.jpg"},
+        new Item(){ Title = "Chola Bhatura", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "cholabhatura.jpg"},
+        new Item(){ Title = "Pav Bhaji", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "pavbhaji.jpg"},
+        new Item(){ Title = "Sushi", Price = 4.50, Quantity = 1, Category = ItemCategory.Main, Image = "sushi.jpg"},
+        new Item(){ Title = "Thali", Price = 12.00, Quantity = 1, Category = ItemCategory.Main, Image = "thali2.jpg"},
+        new Item(){ Title = "Thali (Meat)", Price = 18.00, Quantity = 1, Category = ItemCategory.Main, Image = "thalimeat.jpg"},
+
+        new Item(){ Title = "Baklava", Price = 3.00, Quantity = 1, Category = ItemCategory.Desserts, Image = "baklava.jpg"},
+        new Item(){ Title = "Brownie", Price = 2.00, Quantity = 1, Category = ItemCategory.Desserts, Image = "brownie.jpg"},
+        new Item(){ Title = "Cheese Cake", Price = 3.00, Quantity = 1, Category = ItemCategory.Desserts, Image = "cheesecake.jpg"},
+        new Item(){ Title = "Assorted Chocolates", Price = 2.50, Quantity = 1, Category = ItemCategory.Desserts, Image = "chocolates.jpg"},
+        new Item(){ Title = "Chocolate Sundae", Price = 5.50, Quantity = 1, Category = ItemCategory.Desserts, Image = "chocolatesundae.jpg"},
+        new Item(){ Title = "Gulab Jamun", Price = 4.00, Quantity = 1, Category = ItemCategory.Desserts, Image = "gulabjamun.jpg"},
+        new Item(){ Title = "Apple Pie", Price = 4.00, Quantity = 1, Category = ItemCategory.Desserts, Image = "pie.jpg"},
+        new Item(){ Title = "Ladoo", Price = 1.50, Quantity = 1, Category = ItemCategory.Desserts, Image = "ladoo.jpg"},
+        new Item(){ Title = "Modak", Price = 1.50, Quantity = 1, Category = ItemCategory.Desserts, Image = "modak.jpg"},
+        new Item(){ Title = "Karanji", Price = 1.75, Quantity = 1, Category = ItemCategory.Desserts, Image = "karanji.jpg"},
+
+        new Item(){ Title = "Coffee", Price = 4.00, Quantity = 1, Category = ItemCategory.Beverages, Image = "coffeeandcroissant.jpg"},
     };
     
     public static List<Order> Orders { get; set; } = GenerateOrders();

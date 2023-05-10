@@ -10,7 +10,7 @@ public partial class HomeViewModel
     ObservableCollection<Item> _products;
 
     [ObservableProperty]
-    string category = ItemCategory.Noodles.ToString();
+    string category = ItemCategory.Main.ToString();
 
     partial void OnCategoryChanged(string cat)
     {
@@ -24,7 +24,7 @@ public partial class HomeViewModel
     public HomeViewModel()
     {
         _products = new ObservableCollection<Item>(
-            AppData.Items.Where(x=>x.Category == ItemCategory.Noodles).ToList()
+            AppData.Items.Where(x=>x.Category == ItemCategory.Main).ToList()
         );
     }
 
@@ -34,9 +34,11 @@ public partial class HomeViewModel
         await Shell.Current.GoToAsync($"{nameof(SettingsPage)}?sub=appearance");
     }
 
+    #pragma warning disable 1998, 618
     [RelayCommand]
     async Task AddProduct()
     {
         WeakReferenceMessenger.Default.Send<AddProductMessage>(new AddProductMessage(true));
     }
+    #pragma warning restore 1998, 618
 }

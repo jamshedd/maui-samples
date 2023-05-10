@@ -96,7 +96,7 @@
                                                      Spacing="6">
                                     
                                     <Label Text="{Binding Title}" HorizontalOptions="Center" Style="{StaticResource Title2}" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding Price, StringFormat='${0}'}" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Price, StringFormat='{C1}'}" HorizontalOptions="Center"/>
                                     <!--<Label Text="20 Bowls available" HorizontalOptions="Center" Style="{StaticResource Subhead}"/>-->
                                 </VerticalStackLayout>
                                 <Image
@@ -158,9 +158,8 @@
                                RadioButtonGroup.SelectedValue="{Binding Category}">
                 <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
-                            <x:String>Noodles</x:String>
-                            <x:String>Rice</x:String>
-                            <x:String>Appetizers</x:String>
+                            <x:String>Starters</x:String>
+                            <x:String>Main</x:String>
                             <x:String>Desserts</x:String>
                             <x:String>Beverages</x:String>
                         </x:Array>
