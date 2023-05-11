@@ -206,8 +206,6 @@
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>One</x:String>
-                            <x:String>One</x:String>
-                            <x:String>One</x:String>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -215,15 +213,14 @@
                             <Grid ColumnDefinitions="60,*">
                                 <Image WidthRequest="40" HeightRequest="40"
                                            Aspect="AspectFit"
-                                           Source="food_01.png"/>
+                                           Source="flatnoodles.jpg"/>
                                 <Label Style="{StaticResource Headline}" Grid.Column="1">
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span>Spicy Noodle Soup</Span>
+                                            <Span>Flat Noodles</Span>
                                             <Span Text="{x:Static system:Environment.NewLine}"/>
-                                            <Span TextColor="{StaticResource TextSecondary}" FontSize="12">$2.29</Span>
+                                            <Span TextColor="{StaticResource TextSecondary}" FontSize="12">$5.95</Span>
                                         </FormattedString>
-
                                     </Label.FormattedText>
                                 </Label>
                             </Grid>

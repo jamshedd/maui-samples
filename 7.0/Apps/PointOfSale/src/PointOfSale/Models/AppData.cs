@@ -22,7 +22,6 @@ public static class AppData
         new Item(){ Title = "Ramen", Price = 4.50, Quantity = 1, Category = ItemCategory.Main, Image = "ramen.jpg"},
         new Item(){ Title = "Fried Wontons", Price = 4.00, Quantity = 1, Category = ItemCategory.Main, Image = "friedwontons.jpg"},
         new Item(){ Title = "Ham, Egg, and Roasted Potatoes", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "hameggpotatoes.jpg"},
-        new Item(){ Title = "Chola Bhatura", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "cholabhatura.jpg"},
         new Item(){ Title = "Pav Bhaji", Price = 6.00, Quantity = 1, Category = ItemCategory.Main, Image = "pavbhaji.jpg"},
         new Item(){ Title = "Sushi", Price = 4.50, Quantity = 1, Category = ItemCategory.Main, Image = "sushi.jpg"},
         new Item(){ Title = "Thali", Price = 12.00, Quantity = 1, Category = ItemCategory.Main, Image = "thali2.jpg"},

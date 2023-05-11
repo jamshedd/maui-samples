@@ -34,7 +34,9 @@ public static class MauiProgram
                 fonts.AddFont("fabmdl2.ttf", "Fabric");
             });
 
+#pragma warning disable CA1416 // Validate platform compatibility
         builder.Services.AddMauiBlazorWebView();
+#pragma warning restore CA1416 // Validate platform compatibility
         
 #if WINDOWS
             builder.ConfigureLifecycleEvents(events =>
